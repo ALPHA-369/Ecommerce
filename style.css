@@ -593,6 +593,7 @@ ul {
   .col-2 h1 {
     font-size: 35px;
     line-height: 40px;
+    padding: auto;
   }
   .col-2 p {
     padding: auto;
