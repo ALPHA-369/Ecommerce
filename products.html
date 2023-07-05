@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Champion | Fashion Ecommerce Website</title>
+        <link rel="stylesheet" href="style.css"/>
+        <script src="https://kit.fontawesome.com/9e32680bab.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <!-------Header Section-->
+        <div class="container">
+            <div class="navbar">
+                <div class="logo"><img src="images/logo.png" alt=""/></div>
+                <nav>
+                    <ul id="menu-items">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="products.html">Product</a>
+                        </li>
+                        <li>
+                            <a href="#contact">Contact</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-solid fa-user profile-icon"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <small id="cart-counter">3</small>
+                <a href="cart.html" class="cart-icon"><img src="images/cart.png"></a>
+                <i class="fa-solid fa-bars menu-icon" onclick="toggleMenu()"></i>
+            </div>
+        </div>
+
+        <!-----Products------>
+        <div class="small-container">
+
+            <div class="row row-2">
+                <h2>All Products</h2>
+                <select>
+                    <option>Default Sorting</option>
+                    <option>Sort by Price</option>
+                    <option>Sort by Color</option>
+                    <option>Sort by Rating</option>
+                    <option>Sort by Popularity</option>
+                </select>
+            </div>
+
+            <div class="row">
+                <div class="col-4" onclick="viewProductDetails('Blue Shirt For Men', '$38.00', 'images/product4a.jpg', 'images/product4b.jpg', 'images/product4c.jpg')">
+                    <img src="images/product4a.jpg">
+                    <h4>Blue Shirt</h4>
+                    <p>$38.00</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                </div>
+                <div class="col-4" onclick="viewProductDetails('Red Shirt For Women', '$38.00', 'images/product21a.jpg', 'images/product21b.jpg', 'images/product21c.jpg')">
+                    <img src="images/product21a.jpg" alt="">
+                    <h4>Red Shirt Women</h4>
+                    <p>$38.00</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                </div>
+                <div class="col-4" onclick="viewProductDetails('Calvin Klein Tshirt', '$73.00', 'images/product36a.png', 'images/product36b.png', 'images/product36c.pn    g')">
+                    <img src="images/product36a.png" alt="">
+                    <h4>Calvin Klein Tshirt</h4>
+                    <p>$73.00</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                </div>
+                <div class="col-4" onclick="viewProductDetails('Sports Sneakers', '$108.00', 'images/product27a.jpg', 'images/product27b.jpg', 'images/product27c.jpg')">
+                    <img src="images/product27a.jpg" alt="">
+                    <h4>Sports Sneakers</h4>
+                    <p>$108.00</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                </div>
+                <div class="col-4" onclick="viewProductDetails('Shirt for Men', '$50.00', 'images/product2a.jpg', 'images/product2b.jpg', 'images/product2c.jpg')">
+                    <img src="images/product2a.jpg" alt="">
+                    <h4>Shirt for Men</h4>
+                    <p>$50.00</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                </div>
+                <div class="col-4" onclick="viewProductDetails('Summer Shirt', '$38.00', 'images/product3a.jpg', 'images/product3b.jpg', 'images/product3c.jpg')">
+                    <img src="images/product3a.jpg" alt="">
+                    <h4>Summer Shirt</h4>
+                    <p>$38.00</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                </div>
+                <div class="col-4" onclick="viewProductDetails('Michael Kors Watch', '$1000.00', 'images/product33a.jpg', 'images/product33b.jpg', 'images/product33c.jpg')">
+                    <img src="images/product33a.jpg" alt="">
+                    <h4>Michael Kors Watch</h4>
+                    <p>$1000.00</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                </div>
+                <div class="col-4" onclick="viewProductDetails('Sports Sneakers', '$112.00', 'images/product26a.jpg', 'images/product26b.jpg', 'images/product26c.jpg')">
+                    <img src="images/product26a.jpg" alt="">
+                    <h4>Sports Sneakers</h4>
+                    <p>$112.00</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                </div>
+                <div class="col-4" onclick="viewProductDetails('Black Jacket For Women', '$61.00', 'images/product1a.jpg', 'images/product1b.jpg', 'images/product1c.jpg')">
+                    <img src="images/product1a.jpg" alt="">
+                    <h4>Jacket</h4>
+                    <p>$61.00</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                </div>
+                <div class="col-4" onclick="viewProductDetails('Brown Shoe', '$43.00', 'images/product28a.jpg', 'images/product28b.jpg', 'images/product28c.jpg')">
+                    <img src="images/product28a.jpg" alt="">
+                    <h4>Brown Shoe</h4>
+                    <p>$43.00</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                </div>
+                <div class="col-4" onclick="viewProductDetails('Carju Watch', '$1073.00', 'images/product35a.jpg', 'images/product35b.jpg', 'images/product35c.jpg')">
+                    <img src="images/product35a.jpg" alt="">
+                    <h4>Carju Watch</h4>
+                    <p>$1073.00</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                </div>
+                <div class="col-4" onclick="viewProductDetails(`Blue Women's Dress`, '$28.00', 'images/product23a.jpg', 'images/product23b.jpg', 'images/product23c.jpg')">
+                    <img src="images/product23a.jpg" alt="">
+                    <h4>Blue Women's Dress</h4>
+                    <p>$28.00</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                </div>
+                <div class="col-4" onclick="viewProductDetails('Jacket for Women', '$57.00', 'images/product24a.jpg', 'images/product24b.jpg', 'images/product24c.jpg')">
+                    <img src="images/product24a.jpg" alt="">
+                    <h4>Jacket For Women</h4>
+                    <p>$57.00</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                </div>
+                <div class="col-4" onclick="viewProductDetails('T-shirt', '$20.00', 'images/product13a.jpg', 'images/product13b.jpg', 'images/product13c.jpg')">
+                    <img src="images/product13a.jpg" alt="">
+                    <h4>T-Shirt</h4>
+                    <p>$20.00</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                </div>
+                <div class="col-4" onclick="viewProductDetails('Jacket', '$31.00', 'images/product14a.jpg', 'images/product14b.jpg', 'images/product14c.jpg')">
+                    <img src="images/product14a.jpg" alt="">
+                    <h4>Jacket</h4>
+                    <p>$31.00</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                </div>
+
+            </div>
+            <div class="page-btn">
+                <span>&#8592</span>
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+                <span>&#8594</span>
+            </div>
+        </div>
+
+
+        <!------Footer Section------>
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="ftr-col-1">
+                        <img src="images/logo white.png">
+                        <p>The world's leading fashion store. Subscribe to our Newsletter to get updates on the latest deals
+                                                                                                                                                                                                                                                                                                                and
+                                                                                                                                                                                                                                                                                                                offers.</p>
+                        <form>
+                            <input type="email" placeholder="Your Email Address">
+                            <button type="submit">Subscribe</button>
+                        </form>
+                    </div>
+
+                    <div id="contact" class="ftr-col-2">
+                        <h3>CONTACT US</h3>
+                        <ul>
+                            <li>
+                                <strong>Address:</strong>
+                                <br>
+                                Plot 16A George Anele Estate Layout, Victoria Island, Lagos
+                            </li>
+                            <li>
+                                <strong>Phone NO:</strong>
+                                <br>
+                                +(234)8038915702</li>
+                            <li>
+                                <strong>Email:</strong>
+                                <br>
+                                info@champion.com.ng</li>
+                            <li>
+                                <strong>Socials:</strong>
+                                <br>
+                                <i class="fa-brands fa-square-facebook"></i>
+                                <i class="fa-brands fa-square-twitter"></i>
+                                <i class="fa-brands fa-square-youtube"></i>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="ftr-col-3">
+                        <h3>USEFUL LINKS</h3>
+                        <ul>
+                            <li><a href="">Privacy Policy</a></li>
+                            <li><a href="">Return Policy</a></li>
+                            <li><a href="">FAQs</a></li>
+                            <li><a href="">Blog</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="ftr-col-4">
+                        <h3>MY ACCOUNT</h3>
+                        <ul>
+                            <li><a href="">Login</a></li>
+                            <li><a href="">My Wishlist</a></li>
+                            <li><a href="">Track Order</a></li>
+                            <li><a href="">Order History</a></li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="copyright">
+                    <p>&copy 2023 Uche Jr All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+
+        <script src="main.js"></script>
+        <script src="product-details.js"></script>
+    </body>
+
+</html>

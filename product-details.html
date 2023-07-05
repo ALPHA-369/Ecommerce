@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Champion | Fashion Ecommerce Website</title>
+        <link rel="stylesheet" href="style.css"/>
+        <script src="https://kit.fontawesome.com/9e32680bab.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <!-------Header Section-->
+        <div class="container">
+            <div class="navbar">
+                <div class="logo"><img src="images/logo.png"/></div>
+                <nav>
+                    <ul id="menu-items">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="products.html">Products</a>
+                        </li>
+                        <li>
+                            <a href="#contact">Contact</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-solid fa-user profile-icon"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <small id="cart-counter"></small>
+                <a href="cart.html" class="cart-icon"><img src="images/cart.png"></a>
+                <i class="fa-solid fa-bars menu-icon" onclick="toggleMenu()"></i>
+            </div>
+        </div>
+
+        <!-----Single Product Details------>
+        <div class="small-container product-info">
+            <div class="row">
+                <div class="col-2">
+                    <img src="images/product1a.jpg" id="product-img">
+                    <div class="sm-gallery-row">
+                        <div class="sm-gallery-col">
+                            <img src="images/product1a.jpg" class="sm-gallery-img" id="sm-img-1">
+                        </div>
+                        <div class="sm-gallery-col">
+                            <img src="images/product1b.jpg" class="sm-gallery-img" id="sm-img-2">
+                        </div>
+                        <div class="sm-gallery-col">
+                            <img src="images/product1c.jpg" class="sm-gallery-img" id="sm-img-3">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <h1 id="product-title">BlackJacket For Women</h1>
+                    <h4 id="product-price">$61.00</h4>
+                    <select>
+                        <option>Choose Size</option>
+                        <option>Small</option>
+                        <option>Medium</option>
+                        <option>Large</option>
+                        <option>XL</option>
+                        <option>XXL</option>
+                    </select>
+                    <input type="number" value="1" min="1">
+                    <a class="btn" id="add-to-cart" onclick="cartNoCounter()">Add to Cart</a>
+                    <h3>Product details
+                        <i class="fa fa-indent"></i>
+                    </h3>
+                    <br>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis eaque atque a ipsum. Perspiciatis ut
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    accusantium labore possimus nobis! Aliquam.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="small-container">
+            <div class="row row-2">
+                <h2>Related Products</h2>
+                <p>View More</p>
+            </div>
+        </div>
+
+        <div class="small-container">
+            <div class="row">
+                <div class="col-4">
+                    <img src="images/product9a.jpg" onclick="viewProductDetails(`Navy Blue Cardigan`, '$81.00', 'images/product9a.jpg', 'images/product9b.jpg', 'images/product9c.jpg')">
+                    <h4>Navy Blue Cardigan</h4>
+                    <p>$81.00</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <img src="images/product22a.jpg" onclick="viewProductDetails(`Women's Shortleeve Shirt`, '$35.00', 'images/product22a.jpg', 'images/product22b.jpg', 'images/product22c.jpg')">
+                    <h4>Women's Longsleeve Shirt</h4>
+                    <p>$35.00</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <img src="images/product34a.jpg" onclick="viewProductDetails(`High Heel White Sandals`, '$200.00', 'images/product34a.jpg', 'images/product34b.jpg', 'images/product34c.jpg')">
+                    <h4>High Heel White Sandals</h4>
+                    <p>$200.00</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <img src="images/product11a.jpg" onclick="viewProductDetails(`Black Hoodie`, '$46.00', 'images/product11a.jpg', 'images/product11b.jpg', 'images/product11c.jpg')">
+                    <h4>Black Hoodie</h4>
+                    <p>$46.00</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!------Footer Section------>
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="ftr-col-1">
+                        <img src="images/logo white.png">
+                        <p>The world's leading fashion store. Subscribe to our Newsletter to get updates on the latest deals
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        and
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        offers.</p>
+                        <form>
+                            <input type="email" placeholder="Your Email Address">
+                            <button type="submit">Subscribe</button>
+                        </form>
+                    </div>
+
+                    <div id="contact" class="ftr-col-2">
+                        <h3>CONTACT US</h3>
+                        <ul>
+                            <li>
+                                <strong>Address:</strong>
+                                <br>
+                                Plot 16A George Anele Estate Layout, Victoria Island, Lagos
+                            </li>
+                            <li>
+                                <strong>Phone NO:</strong>
+                                <br>
+                                +(234)8038915702</li>
+                            <li>
+                                <strong>Email:</strong>
+                                <br>
+                                info@champion.com.ng</li>
+                            <li>
+                                <strong>Socials:</strong>
+                                <br>
+                                <i class="fa-brands fa-square-facebook"></i>
+                                <i class="fa-brands fa-square-twitter"></i>
+                                <i class="fa-brands fa-square-youtube"></i>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="ftr-col-3">
+                        <h3>USEFUL LINKS</h3>
+                        <ul>
+                            <li><a href="">Privacy Policy</a></li>
+                            <li><a href="">Return Policy</a></li>
+                            <li><a href="">FAQs</a></li>
+                            <li><a href="">Blog</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="ftr-col-4">
+                        <h3>MY ACCOUNT</h3>
+                        <ul>
+                            <li><a href="">Login</a></li>
+                            <li><a href="">My Wishlist</a></li>
+                            <li><a href="">Track Order</a></li>
+                            <li><a href="">Order History</a></li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="copyright">
+                    <p>&copy 2023 Uche Jr All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+
+        <script src="main.js"></script>
+        <script src="product-details.js"></script>
+    </body>
+
+</html>
