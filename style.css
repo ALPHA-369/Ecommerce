@@ -594,6 +594,9 @@ ul {
     font-size: 35px;
     line-height: 40px;
   }
+  .col-2 p {
+    padding: auto;
+  }
   .col-4 {
     flex-basis: 10%;
     padding: 20px;
