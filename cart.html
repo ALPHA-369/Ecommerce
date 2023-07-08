@@ -42,72 +42,154 @@
         </div>
 
         <!------Cart Items--->
-        <div class="small-container cart-container"></div>
+        <div class="cart-container">
+            <h1>Your Cart</h1>
+            <div class="table">
+                <div class="cart-row cart-header">
+                    <div class="cell item-header">Item</div>
+                    <div class="cell">Quantity</div>
+                    <div class="cell">Subtotal</div>
+                    <div class="cell">Actions</div>
+                </div>
+                <div class="cart-item"></div>
+            </div>
+            <div class="summary">
+                <p class="total"></p>
+                <button>Proceed to Checkout</button>
+            </div>
+        </div>
+        <!----Related Products-->
+        <div class="small-container">
+            <div class="row row-2">
+                <h2>Related Products</h2>
+                <p>View More</p>
+            </div>
+        </div>
+
+        <div class="small-container">
+            <div class="row">
+                <div class="col-4">
+                    <img src="images/product25a.jpg" onclick="viewProductDetails(`Women 2 piece Summer Outfit`, '$49.00', 'images/product25a.jpg', 'images/product25b.jpg', 'images/product25c.jpg')">
+                    <h4>Women 2 piece Summer Outfit</h4>
+                    <p>$49.00</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <img src="images/product10a.jpg" onclick="viewProductDetails(`Hooded T-Shirt and Short`, '$25.00', 'images/product10a.jpg', 'images/product10b.jpg', 'images/product10c.jpg')">
+                    <h4>Hooded T-Shirt and Short</h4>
+                    <p>$25.00</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <img src="images/product6a.jpg" onclick="viewProductDetails(`Fashion Men's Short`, '$20.00', 'images/product6a.jpg', 'images/product6b.jpg', 'images/product6c.jpg')">
+                    <h4>Fashion Men's Short</h4>
+                    <p>$200.00</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <img src="images/product20a.jpg" onclick="viewProductDetails(`Women's Chiffon Blouse`, '$67.00', 'images/product20a.jpg', 'images/product20b.jpg', 'images/product20c.jpg')">
+                    <h4>Women's Chiffon Blouse</h4>
+                    <p>$67.00</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!------Footer Section------>
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="ftr-col-1">
+                        <img src="images/logo white.png"/>
+                        <p>
+                            The world's leading fashion store. Subscribe to our Newsletter to
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              get updates on the latest deals and offers.
+                        </p>
+                        <form>
+                            <input type="email" placeholder="Your Email Address"/>
+                            <button type="submit">Subscribe</button>
+                        </form>
+                    </div>
+
+                    <div id="contact" class="ftr-col-2">
+                        <h3>CONTACT US</h3>
+                        <ul>
+                            <li>
+                                <strong>Address:</strong>
+                                <br/>
+                                Plot 16A George Anele Estate Layout, Victoria Island, Lagos
+                            </li>
+                            <li>
+                                <strong>Phone NO:</strong>
+                                <br/>
+                                +(234)8038915702
+                            </li>
+                            <li>
+                                <strong>Email:</strong>
+                                <br/>
+                                info@champion.com.ng
+                            </li>
+                            <li>
+                                <strong>Socials:</strong>
+                                <br/>
+                                <i class="fa-brands fa-square-facebook"></i>
+                                <i class="fa-brands fa-square-twitter"></i>
+                                <i class="fa-brands fa-square-youtube"></i>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="ftr-col-3">
+                        <h3>USEFUL LINKS</h3>
+                        <ul>
+                            <li><a href="">Privacy Policy</a></li>
+                            <li><a href="">Return Policy</a></li>
+                            <li><a href="">FAQs</a></li>
+                            <li><a href="">Blog</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="ftr-col-4">
+                        <h3>MY ACCOUNT</h3>
+                        <ul>
+                            <li><a href="">Login</a></li>
+                            <li><a href="">My Wishlist</a></li>
+                            <li><a href="">Track Order</a></li>
+                            <li><a href="">Order History</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <p>&copy 2023 Uche Jr All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+        <script src="cart.js"></script>
+        <script src="main.js"></script>
     </body>
-</html></div><!------Footer Section------><div class="footer">
-<div class="container">
-    <div class="row">
-        <div class="ftr-col-1">
-            <img src="images/logo white.png"/>
-            <p>
-                The world's leading fashion store. Subscribe to our Newsletter to
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  get updates on the latest deals and offers.
-            </p>
-            <form>
-                <input type="email" placeholder="Your Email Address"/>
-                <button type="submit">Subscribe</button>
-            </form>
-        </div>
-
-        <div id="contact" class="ftr-col-2">
-            <h3>CONTACT US</h3>
-            <ul>
-                <li>
-                    <strong>Address:</strong>
-                    <br/>
-                    Plot 16A George Anele Estate Layout, Victoria Island, Lagos
-                </li>
-                <li>
-                    <strong>Phone NO:</strong>
-                    <br/>
-                    +(234)8038915702
-                </li>
-                <li>
-                    <strong>Email:</strong>
-                    <br/>
-                    info@champion.com.ng
-                </li>
-                <li>
-                    <strong>Socials:</strong>
-                    <br/>
-                    <i class="fa-brands fa-square-facebook"></i>
-                    <i class="fa-brands fa-square-twitter"></i>
-                    <i class="fa-brands fa-square-youtube"></i>
-                </li>
-            </ul>
-        </div>
-
-        <div class="ftr-col-3">
-            <h3>USEFUL LINKS</h3>
-            <ul>
-                <li><a href="">Privacy Policy</a></li>
-                <li><a href="">Return Policy</a></li>
-                <li><a href="">FAQs</a></li>
-                <li><a href="">Blog</a></li>
-            </ul>
-        </div>
-
-        <div class="ftr-col-4">
-            <h3>MY ACCOUNT</h3>
-            <ul>
-                <li><a href="">Login</a></li>
-                <li><a href="">My Wishlist</a></li>
-                <li><a href="">Track Order</a></li>
-                <li><a href="">Order History</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="copyright">
-        <p>&copy 2023 Uche Jr All Rights Reserved.</p>
-    </div>
-</div></div><script src="cart.js"></script><script src="main.js"></script></body></html>
+</html>
