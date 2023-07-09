@@ -1,10 +1,13 @@
 function displayCart() {
   let cartItems = localStorage.getItem("itemsInCart");
   cartItems = JSON.parse(cartItems);
+  let emptyCart = document.querySelector(".empty-cart");
+  let cartContainer = document.querySelector(".cart-container");
   let table = document.querySelector(".table");
   let cartItem = document.querySelector(".cart-item");
   if (cartItems && table) {
     Object.values(cartItems).map((item) => {
+      emptyCart.style.display = "none";
       cartItem.innerHTML += `
       <div class="cart-row">
       <div class="cell item">
@@ -32,19 +35,9 @@ function displayCart() {
     });
     let totalCost = localStorage.getItem("totalCost");
     document.querySelector(".total").innerHTML = `Total: $${totalCost}`;
+  } else {
+    cartContainer.style.display = "none";
   }
 }
 
 displayCart();
-
-function remove() {
-  let cartItems = localStorage.getItem("itemsInCart");
-  cartItems = JSON.parse(cartItems);
-  let table = document.querySelector(".table");
-  let cartItem = document.querySelector(".cart-item");
-  if (cartItems && table) {
-    Object.values(cartItems).map((item) => {
-      cartItem.innerHTML += "";
-    });
-  }
-}
