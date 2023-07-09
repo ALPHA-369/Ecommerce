@@ -23,15 +23,28 @@ function displayCart() {
       </div>
       <div class="cell subtotal">$${item.itemPrice * item.inCart}</div>
       <div class="cell">
-          <a class="remove-btn">Remove
+          <a class="remove-btn" onclick="remove()">Remove
           </a>
       </div>
   </div>
         `;
       table.appendChild(cartItem);
-      localStorage.setItem("subTotal", item.itemPrice * item.inCart);
     });
+    let totalCost = localStorage.getItem("totalCost");
+    document.querySelector(".total").innerHTML = `Total: $${totalCost}`;
   }
 }
 
 displayCart();
+
+function remove() {
+  let cartItems = localStorage.getItem("itemsInCart");
+  cartItems = JSON.parse(cartItems);
+  let table = document.querySelector(".table");
+  let cartItem = document.querySelector(".cart-item");
+  if (cartItems && table) {
+    Object.values(cartItems).map((item) => {
+      cartItem.innerHTML += "";
+    });
+  }
+}

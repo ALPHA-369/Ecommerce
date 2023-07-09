@@ -492,7 +492,6 @@ select:focus {
 
 .summary {
   margin-top: 20px;
-  margin-right: 10px;
   text-align: right;
 }
 
@@ -723,11 +722,11 @@ ul {
   .row {
     text-align: center;
   }
-  .col-2 h1 {
+  .hero-h1 {
     font-size: 30px;
     line-height: 1.1em;
   }
-  .col-2 p {
+  .hero-p {
     font-size: 14px;
     line-height: 1.2em;
     padding-left: 40px;
