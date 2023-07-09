@@ -606,9 +606,13 @@ ul {
 
 @media only screen and (max-width: 1090px) {
   .col-2 h1 {
-    font-size: 35px;
-    line-height: 40px;
+    font-size: 30px;
+    line-height: 30px;
     margin: 5px 0;
+  }
+  .col-2 p {
+    font-size: 12px;
+    line-height: 15px;
   }
   .col-4 {
     scale: 0.8;
@@ -653,7 +657,11 @@ ul {
     margin-top: 10px;
   }
 }
-
+@media only screen and (max-height: 900px) {
+  .header {
+    height: 100vh;
+  }
+}
 @media only screen and (max-width: 800px) {
   .logo img {
     width: 70px;
@@ -711,12 +719,29 @@ ul {
     flex-basis: 30%;
   }
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 639px) {
   .row {
     text-align: center;
   }
+  .col-2 h1 {
+    font-size: 30px;
+    line-height: 1.1em;
+  }
+  .col-2 p {
+    font-size: 14px;
+    line-height: 1.2em;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
   .item-info {
     display: block;
+  }
+  .header .row {
+    margin-top: 40px;
+  }
+  .img-col-2 {
+    position: relative;
+    overflow: hidden;
   }
 }
 
@@ -724,10 +749,6 @@ ul {
   .col-2,
   .col-3 {
     flex-basis: 100%;
-  }
-  .col-2 h1 {
-    font-size: 35px;
-    line-height: 40px;
   }
   .col-4 {
     flex-basis: 10%;
