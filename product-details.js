@@ -58,17 +58,17 @@ function setItems(item) {
   let cartItems = localStorage.getItem("itemsInCart");
   cartItems = JSON.parse(cartItems);
   if (cartItems) {
-    if (cartItems[item.itemTitle] == undefined) {
+    if (cartItems[item.itemImage] == undefined) {
       cartItems = {
         ...cartItems,
-        [item.itemTitle]: item,
+        [item.itemImage]: item,
       };
     }
-    cartItems[item.itemTitle].inCart += 1;
+    cartItems[item.itemImage].inCart += 1;
   } else {
     item.inCart = 1;
     cartItems = {
-      [item.itemTitle]: item,
+      [item.itemImage]: item,
     };
   }
 

@@ -1,3 +1,12 @@
+let nav = document.querySelector(".header");
+window.onscroll = function () {
+  if (document.documentElement.scrollTop > 20) {
+    nav.classList.add("sticky");
+  } else {
+    nav.classList.remove("sticky");
+  }
+};
+
 // Menu toggler
 var menuItems = document.getElementById("menu-items");
 menuItems.style.maxHeight = "0px";

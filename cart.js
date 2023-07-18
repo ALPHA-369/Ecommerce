@@ -1,10 +1,12 @@
+let cartItems = localStorage.getItem("itemsInCart");
+cartItems = JSON.parse(cartItems);
+let emptyCart = document.querySelector(".empty-cart");
+let cartContainer = document.querySelector(".cart-container");
+let table = document.querySelector(".table");
+let cartItem = document.querySelector(".cart-item");
+
+// Display Cart Items
 function displayCart() {
-  let cartItems = localStorage.getItem("itemsInCart");
-  cartItems = JSON.parse(cartItems);
-  let emptyCart = document.querySelector(".empty-cart");
-  let cartContainer = document.querySelector(".cart-container");
-  let table = document.querySelector(".table");
-  let cartItem = document.querySelector(".cart-item");
   if (cartItems && table) {
     Object.values(cartItems).map((item) => {
       emptyCart.style.display = "none";
@@ -26,7 +28,7 @@ function displayCart() {
       </div>
       <div class="cell subtotal">$${item.itemPrice * item.inCart}</div>
       <div class="cell">
-          <a class="remove-btn" onclick="remove()">Remove
+          <a class="remove-btn" onclick="removeItem()">Remove
           </a>
       </div>
   </div>
@@ -41,3 +43,5 @@ function displayCart() {
 }
 
 displayCart();
+
+// Remove Cart Item

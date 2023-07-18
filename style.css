@@ -9,14 +9,23 @@ body {
   font-family: "Poppins", sans-serif;
 }
 .logo img {
-  width: 100px;
-  height: 80px;
-  filter: hue-rotate(57deg);
+  width: 200px;
+}
+.header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.sticky {
+  background: #fff;
 }
 .navbar {
   display: flex;
   align-items: center;
-  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
 }
 nav {
   flex: 1;
@@ -79,20 +88,22 @@ p {
 }
 .btn {
   display: inline-block;
-  background: #905104;
+  background: #c6710a;
   color: #fff;
   padding: 8px 30px;
   margin: 30px 0;
   border-radius: 30px;
   transition: 0.5s;
+  cursor: pointer;
 }
 .btn:hover {
-  background: #702d12;
+  background: #905104;
 }
-.header {
+.hero {
   background: #e0d2c3;
+  padding-top: 40px;
 }
-.header .row {
+.hero .row {
   margin-top: 70px;
 }
 .profile-icon {
@@ -545,6 +556,78 @@ select:focus {
   font-size: 16px;
 }
 
+/*Account Page*/
+.account {
+  padding: 100px 0;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(245, 246, 252, 0.52),
+      #ca985c
+    ),
+    url("images/account-bg.png");
+}
+.form-container {
+  background: #fff;
+  max-width: 350px;
+  height: 400px;
+  text-align: center;
+  position: relative;
+  padding: 20px 0;
+  margin: auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.form-container span {
+  font-weight: bold;
+  padding: 0 10px;
+  color: #555;
+  cursor: pointer;
+  width: 100px;
+  display: inline-block;
+}
+.form-btn {
+  display: inline-block;
+}
+.form-container form {
+  max-width: 300px;
+  padding: 0 20px;
+  margin-left: 5px;
+  position: absolute;
+  top: 130px;
+  transition: transform 0.7s;
+}
+form input {
+  width: 92%;
+  height: 30px;
+  margin: 10px 0;
+  padding: 0 10px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+form input:focus {
+  outline: 1px solid #c6710a;
+}
+form .btn {
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  margin: 10px 0;
+}
+#loginForm {
+  left: -350px;
+}
+form a {
+  font-size: 12px;
+}
+#indicator {
+  width: 100px;
+  border: none;
+  background: #c6710a;
+  height: 3px;
+  margin-top: 8px;
+  transform: translateX(135px);
+  transition: transform 0.7s;
+}
 /****** Footer Section ****/
 .footer {
   background: #302c2c;
@@ -632,8 +715,15 @@ ul {
   margin: 20px 0 5px 0;
   text-align: center;
 }
-
+@media only screen and (max-height: 900px) and (min-height: 650px) {
+  .hero {
+    height: 100vh;
+  }
+}
 @media only screen and (max-width: 1090px) {
+  .navbar {
+    max-width: 85%;
+  }
   .col-2 h1 {
     font-size: 30px;
     line-height: 30px;
@@ -686,15 +776,10 @@ ul {
     margin-top: 10px;
   }
 }
-@media only screen and (max-height: 900px) {
-  .header {
-    height: 100vh;
-  }
-}
+
 @media only screen and (max-width: 800px) {
   .logo img {
-    width: 70px;
-    height: 50px;
+    width: 150px;
   }
   .slide-text {
     font-size: 30px;
@@ -765,7 +850,7 @@ ul {
   .item-info {
     display: block;
   }
-  .header .row {
+  .hero .row {
     margin-top: 40px;
   }
   .img-col-2 {
@@ -833,12 +918,14 @@ ul {
   .empty-cart p {
     padding: 0 30px;
   }
+  .form-container {
+    scale: 0.8;
+  }
 }
-
-@media only screen and (max-width: 350px) {
+@media only screen and (max-width: 379px) {
   .col-2 h1 {
     font-size: 25px;
-    line-height: 25px;
+    line-height: 30px;
   }
   .col-2 p {
     font-size: 10px;
@@ -854,5 +941,8 @@ ul {
   }
   .cart-header .cell {
     font-size: 10px;
+  }
+  #loginForm {
+    max-width: 250px;
   }
 }
