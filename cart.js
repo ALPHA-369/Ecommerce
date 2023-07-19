@@ -28,7 +28,7 @@ function displayCart() {
       </div>
       <div class="cell subtotal">$${item.itemPrice * item.inCart}</div>
       <div class="cell">
-          <a class="remove-btn" onclick="removeItem()">Remove
+          <a class="remove-btn">Remove
           </a>
       </div>
   </div>
@@ -45,3 +45,23 @@ function displayCart() {
 displayCart();
 
 // Remove Cart Item
+// var removeCartItemButtons = document.getElementsByClassName("remove-btn");
+// for (var i = 0; i < removeCartItemButtons.length; i++) {
+//   var button = removeCartItemButtons[i];
+//   button.addEventListener("click", function (event) {
+//     let cartItems = localStorage.getItem("productsInCart");
+//     cartItems = JSON.parse(cartItems);
+
+//     for (var i in cartItems) {
+//       if (cartItems != null) {
+//         localStorage.removeItem("cartNumbers", cartItems[i].inCart--);
+//         localStorage.removeItem("productsInCart", cartItems[i]);
+//         localStorage.removeItem("totalCost");
+//       } else {
+//         console.log("empty");
+//         document.getElementById("demo").innerHTML = "cart is empty";
+//       }
+//     }
+//     location.reload();
+//   });
+// }
