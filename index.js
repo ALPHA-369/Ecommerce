@@ -1,4 +1,4 @@
-document.querySelector(".header").style.background = "#fc8996";
+document.querySelector(".header").style.background = "#ecbbc1";
 // Carousel autoSlider
 let slideIndex = 0;
 showSlides();

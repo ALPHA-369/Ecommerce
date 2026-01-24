@@ -1,20 +1,21 @@
 :root {
-  --primary-red: #e63440;
+  --primary-red: #e6c834;
   --primary-dark-red: #6b0a10;
-  --medium-red: #c91e28;
+  --medium-red: #bd426e;
   --dark-red: #a01820;
   --light-red: #ed7a87;
-  --very-light-red: #f5c2c8;
+  --very-light-red: `#f5c2c8;
   --almost-white-red: #fdf0f2;
 
-  --brown-accent: #a27605;
-  --tan-accent: #d6972a;
-  --orange-accent: #ce8405;
-  --light-brown: #9f6e1a;
-  --dark-brown: #905104;
-  --brown-text: #823d0c;
+  --brown-accent: #a2051f;
+  --tan-accent: #d62a4c;
+  --orange-accent: #ce052a;
+  --light-brown: #9f1a37;
+  --dark-brown: #90042c;
+  --brown-text: #820c10;
 
-  --text-dark: #302c2c;
+  --text-color-main: #fef9f9;
+  --text-dark: #111;
   --text-light: #f2f2f2;
   --text-muted: #555;
   --text-dimmed: #333;
@@ -25,8 +26,8 @@
   --border-soft: #ccc;
 
   --bg-light: #e6dede;
-  --bg-medium: #c6af95;
-  --bg-gradient: #ca985c;
+  --bg-medium: #c6959f;
+  --bg-gradient: #a2ca5c;
 
   --shadow-dark: #555;
   --dot-inactive: #bbb;
@@ -111,7 +112,6 @@ p {
 .col-2 img {
   max-width: 100%;
   padding: 50px 0;
-  filter: drop-shadow(20px 20px 20px #555);
 }
 
 .col-2 h1 {
@@ -187,6 +187,8 @@ p {
 }
 .col-4 img {
   width: 100%;
+  height: 300px;
+  object-fit: contain;
 }
 .title {
   text-align: center;
