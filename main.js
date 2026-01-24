@@ -1,11 +1,20 @@
 let nav = document.querySelector(".header");
-window.onscroll = function () {
-  if (document.documentElement.scrollTop > 20) {
-    nav.classList.add("sticky");
-  } else {
-    nav.classList.remove("sticky");
-  }
-};
+let logo = document.querySelector(".logo img");
+let lastScrollY = 0;
+
+if (nav) {
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > lastScrollY) {
+      nav.style.transform = "translateY(-100%)";
+      logo.classList.add("logo-sticky");
+    } else {
+      nav.classList.add("header-sticky");
+      logo.classList.remove("logo-sticky");
+      nav.style.transform = "translateY(0)";
+    }
+    lastScrollY = window.scrollY;
+  });
+}
 
 // Menu toggler
 var menuItems = document.getElementById("menu-items");
