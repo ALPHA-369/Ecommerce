@@ -40,7 +40,6 @@ body {
 
 /* Lazy Loading Image Styles */
 img[loading="lazy"] {
-  background-color: var(--border-light);
   opacity: 0.7;
   transition: opacity 0.3s ease-in-out;
 }
